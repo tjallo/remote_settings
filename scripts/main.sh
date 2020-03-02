@@ -4,5 +4,5 @@
 cd /home/tjalle/gitPush/scripts
 
 #Run different scripts
-./zsh.sh
-./gitPush.sh
+sudo ./zsh.sh
+sudo ./gitPush.sh
