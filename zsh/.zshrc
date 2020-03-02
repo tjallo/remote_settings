@@ -98,11 +98,25 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+function help() {
+    echo "scZSH, source .zshrc"
+    echo "cn, open new code window in cwd"
+    echo "setupFolders, setup Github folders for copy"
+    echo "copyZSHRC, copy ZSHRC to backup folder"
+    echo "genPush, generic push the current folder"
+    echo "pushSettings, copy and backup settings then push them"
+}
+
 function scZSH() {
     echo "Sourced ZSHRC"
     source ~/.zshrc
 }
 
+function setupFolders() {
+    sudo mkdir ~/github
+    cd ~/github
+    git clone https://github.com/tjallo/remote_settings
+}
 
 function cn() {
     code -n .
