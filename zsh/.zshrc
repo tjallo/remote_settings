@@ -120,13 +120,16 @@ function genPush() {
 
 function pushSettings(){
     #copy current zsh config
+    echo "Copy ZSHRC"
     copyZSHRC
 
     #copy current vscode extension list
+    echo "Copy VSCODE extension list"
     cd ~/github/remote_settings/vscode
     code --list-extensions| xargs -L 1 echo code --install-extension > extensions.txt
 
     #push to github
+    echo "Pushing to GitHub"
     cd ~/github/remote_settings 
     genPush
 }
