@@ -106,7 +106,7 @@ function help() {
     echo "setupFolders, setup Github folders for copy"
     echo "copyZSHRC, copy ZSHRC to backup folder"
     echo "genPush, generic push the current folder"
-    echo "pushSettings, copy and backup settings then push them"
+    echo "pushSettings, copy and backup settings then push them to the github repo"
     echo "getCodeExtensions, get code extensions and export them to cwd"
 }
 
@@ -116,34 +116,41 @@ function srcz() {
 }
 
 function home() {
+    echo "You are now in the home directory"
     cd ~
 }
 
 function Zedit(){
+    echo "Opening .zshrc in code..."
     code -n ~/.zshrc
 }
 
 function setupFolders() {
+    echo "setting up folders..."
     sudo mkdir ~/github
     cd ~/github
     git clone https://github.com/tjallo/remote_settings
 }
 
 function cn() {
+    echo "opening new code window in cwd..."
     code -n .
 }
 
 function copyZSHRC(){
+    echo "backing up .zshrc..."
     cp ~/.zshrc ~/github/remote_settings/zsh/
 }
 
 function genPush() {
+    echo "started pushing local folder"
     git add .
     git commit -m "generic push"
     git push
 }
 
 function getCodeExtensions() {
+    echo "exporting vscode extensions..."
     code --list-extensions| xargs -L 1 echo code --install-extension > extensions.txt
 }
 
