@@ -98,6 +98,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+function scZSH() {
+    echo "Sourced ZSHRC"
+    source ~/.zshrc
+}
+
+
 function cn() {
     code -n .
 }
@@ -113,7 +119,14 @@ function genPush() {
 }
 
 function pushSettings(){
-    cp ~/.zshrc ~/github/remote_settings/zsh/
+    #copy current zsh config
+    copyZSHRC
+
+    #copy current vscode extension list
+    cd ~/github/remote_settings/vscode
+    code --list-extensions| xargs -L 1 echo code --install-extension > extensions.txt
+
+    #push to github
     cd ~/github/remote_settings 
     genPush
 }
