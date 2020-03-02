@@ -99,11 +99,21 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 function cn() {
-code -n .
+    code -n .
+}
+
+function copyZSHRC(){
+    cp ~/.zshrc ~/github/remote_settings/zsh/
 }
 
 function genPush() {
     git add .
     git commit -m "generic push"
     git push
+}
+
+function pushSettings(){
+    cp ~/.zshrc ~/github/remote_settings/zsh/
+    cd ~/github/remote_settings 
+    genPush
 }
