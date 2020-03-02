@@ -99,17 +99,28 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 function help() {
-    echo "scZSH, source .zshrc"
+    echo "srcz, source .zshrc"
+    echo "Zedit, edit .zshrc"
+    echo "home, go to home directory"
     echo "cn, open new code window in cwd"
     echo "setupFolders, setup Github folders for copy"
     echo "copyZSHRC, copy ZSHRC to backup folder"
     echo "genPush, generic push the current folder"
     echo "pushSettings, copy and backup settings then push them"
+    echo "getCodeExtensions, get code extensions and export them to cwd"
 }
 
-function scZSH() {
+function srcz() {
     echo "Sourced ZSHRC"
     source ~/.zshrc
+}
+
+function home() {
+    cd ~
+}
+
+function Zedit(){
+    code -n ~/.zshrc
 }
 
 function setupFolders() {
@@ -132,6 +143,10 @@ function genPush() {
     git push
 }
 
+function getCodeExtensions() {
+    code --list-extensions| xargs -L 1 echo code --install-extension > extensions.txt
+}
+
 function pushSettings(){
     #copy current zsh config
     echo "Copy ZSHRC"
@@ -140,7 +155,7 @@ function pushSettings(){
     #copy current vscode extension list
     echo "Copy VSCODE extension list"
     cd ~/github/remote_settings/vscode
-    code --list-extensions| xargs -L 1 echo code --install-extension > extensions.txt
+    getCodeExtensions
 
     #push to github
     echo "Pushing to GitHub"
