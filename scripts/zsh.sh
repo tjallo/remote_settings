@@ -1,2 +1,2 @@
-cd /home/tjalle/gitPush/
-cp /home/tjalle/.zshrc /home/tjalle/gitPush/zsh
+cd ~/github/remote_settings
+cp ~/.zshrc /home/tjalle/gitPush/zsh
