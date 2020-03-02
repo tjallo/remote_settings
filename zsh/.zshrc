@@ -101,3 +101,9 @@ source $ZSH/oh-my-zsh.sh
 function cn() {
 code -n .
 }
+
+function genPush() {
+    git add .
+    git commit -m "generic push"
+    git push
+}
