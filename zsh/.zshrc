@@ -110,6 +110,7 @@ function help() {
     echo "pushSettings, copy and backup settings then push them to the github repo"
     echo "getCodeExtensions, get code extensions and export them to cwd"
     echo "getFFMPEGScript, get, execute and remove ffmpeg merge script"
+    echo "getLatest, get latest remote script from github"
 }
 
 function srcz() {
@@ -187,8 +188,4 @@ function getLatest() {
     cd ~
     sudo wget -O .zshrc https://raw.githubusercontent.com/tjallo/remote_settings/master/zsh/.zshrc
     source .zshrc
-}
-
-function echoTest() {
-    echo "test"
 }
