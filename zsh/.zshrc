@@ -169,3 +169,7 @@ function pushSettings(){
     cd ~/github/remote_settings 
     genPush
 }
+
+function p3() {
+    python3 $1
+}
