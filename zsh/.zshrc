@@ -111,6 +111,7 @@ function help() {
     echo "getCodeExtensions, get code extensions and export them to cwd"
     echo "getFFMPEGScript, get, execute and remove ffmpeg merge script"
     echo "getUpdate, get latest remote script from github"
+    echo "goWorkspace, go to /home/tjalle/workspaces/Workspace\ VB"
 }
 
 function srcz() {
