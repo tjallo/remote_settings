@@ -184,5 +184,5 @@ function getFFMPEGScript() {
 }
 
 function getLatest() {
-    bash < curl https://gist.githubusercontent.com/tjallo/420663ee5cfa00da2288ce6c97da7faa/raw/d980731d445f141cea228daa349c84f8760eaee8/getzshrc.sh
+    bash <(curl https://gist.githubusercontent.com/tjallo/420663ee5cfa00da2288ce6c97da7faa/raw/d980731d445f141cea228daa349c84f8760eaee8/getzshrc.sh)
 }
