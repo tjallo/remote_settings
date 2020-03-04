@@ -144,6 +144,7 @@ function cn() {
 function copyZSHRC(){
     echo "backing up .zshrc..."
     cp ~/.zshrc ~/github/remote_settings/zsh/
+    cp -r ~/.oh-my-zsh ~/github/remote_settings/zsh
 }
 
 function genPush() {
