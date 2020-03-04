@@ -158,6 +158,7 @@ function getCodeExtensions() {
 }
 
 function pushSettings(){
+    srcz
     #copy current zsh config
     echo "Copy ZSHRC"
     copyZSHRC
