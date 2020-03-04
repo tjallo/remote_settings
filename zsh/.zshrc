@@ -110,7 +110,7 @@ function help() {
     echo "pushSettings, copy and backup settings then push them to the github repo"
     echo "getCodeExtensions, get code extensions and export them to cwd"
     echo "getFFMPEGScript, get, execute and remove ffmpeg merge script"
-    echo "getLatest, get latest remote script from github"
+    echo "getUpdate, get latest remote script from github"
 }
 
 function srcz() {
@@ -184,8 +184,10 @@ function getFFMPEGScript() {
     rm mergeScript.command
 }
 
-function getLatest() {
+function getUpdate() {
     cd ~
     sudo wget -O .zshrc https://raw.githubusercontent.com/tjallo/remote_settings/master/zsh/.zshrc
     source .zshrc
+    echo "Got most recent script."
+    echo "Note, after a push, GitHub needs some time to update, so getRecent is not always the latest pushed version, but the most recent GitHub version"
 }
