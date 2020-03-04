@@ -145,7 +145,7 @@ function copyZSHRC(){
 function genPush() {
     echo "started pushing local folder"
     git add .
-    git commit -m "generic push"
+    git commit -m "Automated Push"
     git push
 }
 
