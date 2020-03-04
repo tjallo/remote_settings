@@ -194,6 +194,7 @@ function getUpdate() {
     echo "Note, after a push, GitHub needs some time to update, so getRecent is not always the latest pushed version, but the most recent GitHub version"
 }
 
-function goWorkspace() {
+function goWorkspace() {    
     cd /home/tjalle/workspaces/Workspace\ VB
+    echo "You are now in ~/workspaces/Workpace VB"
 }
