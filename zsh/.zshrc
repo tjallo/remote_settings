@@ -188,7 +188,7 @@ function getFFMPEGScript() {
 function getUpdate() {
     cd ~
     sudo wget -O .zshrc https://raw.githubusercontent.com/tjallo/remote_settings/master/zsh/.zshrc
-    source .zshrc
+    srcz
     echo "Got most recent script."
     echo "Note, after a push, GitHub needs some time to update, so getRecent is not always the latest pushed version, but the most recent GitHub version"
 }
