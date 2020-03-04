@@ -102,12 +102,14 @@ function help() {
     echo "srcz, source .zshrc"
     echo "Zedit, edit .zshrc"
     echo "home, go to home directory"
+    echo "p3, python3 alias"
     echo "cn, open new code window in cwd"
     echo "setupFolders, setup Github folders for copy"
     echo "copyZSHRC, copy ZSHRC to backup folder"
     echo "genPush, generic push the current folder"
     echo "pushSettings, copy and backup settings then push them to the github repo"
     echo "getCodeExtensions, get code extensions and export them to cwd"
+    echo "getFFMPEGScript, get, execute and remove ffmpeg merge script"
 }
 
 function srcz() {
@@ -172,4 +174,11 @@ function pushSettings(){
 
 function p3() {
     python3 $1
+}
+
+function getFFMPEGScript() {
+    wget -O mergeScript.command https://raw.githubusercontent.com/tjallo/ffmpeg-mp4-aif-merger/master/ffmpeg-mp4-aif-merger
+    sudo chmod +x mergeScript.command
+    ./mergeScript.command
+    rm mergeScript.command
 }
