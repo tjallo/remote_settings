@@ -188,3 +188,7 @@ function getLatest() {
     sudo wget -O .zshrc https://raw.githubusercontent.com/tjallo/remote_settings/master/zsh/.zshrc
     source .zshrc
 }
+
+function echoTest() {
+    echo "test"
+}
