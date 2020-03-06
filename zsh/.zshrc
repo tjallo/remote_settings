@@ -113,6 +113,7 @@ function help() {
     echo "getUpdate, get latest remote script from github"
     echo "goWorkspace, go to /home/tjalle/workspaces/Workspace\ VB"
     echo "gowcn, go to work space and open in editor"
+    echo "stackSettingsPushpush settings to local stack folder"
 }
 
 function srcz() {
@@ -211,4 +212,21 @@ function gowcn() {
 
 function libzmq5(){
     sudo apt install -y --allow-downgrades /home/tjalle/libzmq5_4.1.4-7_amd64.deb 
+}
+
+function setupStack() {
+    sudo apt-get install davfs2
+    sudo mkdir ~/stack
+    sudo mount.davfs https://tjallo.stackstorage.com/remote.php/webdav/ ~/stack -o rw,uid=tjallo
+}
+
+function stackSettingsPush() {
+    pushSettings
+    cd ~/stack
+    git clone https://github.com/tjallo/remote_settings
+    git clone https://github.com/tjallo/Flutter_DateTime_HelloWorld
+    git clone https://github.com/tjallo/PrivateFlaskServer
+    git clone https://github.com/tjallo/SynologyTimeChimpFolder
+    git clone https://github.com/tjallo/soundsnap
+    git clone https://github.com/tjallo/ffmpeg-mp4-aif-merger
 }
