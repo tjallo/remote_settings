@@ -114,6 +114,8 @@ function help() {
     echo "goWorkspace, go to /home/tjalle/workspaces/Workspace\ VB"
     echo "gowcn, go to work space and open in editor"
     echo "stackSettingsPushpush settings to local stack folder"
+    echo "setupStack, setup local stack"
+    echo "setupAll, setup stack and local folders"
 }
 
 function srcz() {
@@ -229,4 +231,9 @@ function stackSettingsPush() {
     sudo git clone https://github.com/tjallo/SynologyTimeChimpFolder
     sudo git clone https://github.com/tjallo/soundsnap
     sudo git clone https://github.com/tjallo/ffmpeg-mp4-aif-merger
+}
+
+function setupAll() {
+    setupFolders
+    setupStack
 }
