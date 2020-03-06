@@ -222,7 +222,7 @@ function setupStack() {
 
 function stackSettingsPush() {
     pushSettings
-    cd ~/stack
+    cd ~/stack/000\ GitHub/
     sudo git clone https://github.com/tjallo/remote_settings
     sudo git clone https://github.com/tjallo/Flutter_DateTime_HelloWorld
     sudo git clone https://github.com/tjallo/PrivateFlaskServer
