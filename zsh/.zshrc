@@ -113,7 +113,7 @@ function help() {
     echo "getUpdate, get latest remote script from github"
     echo "goWorkspace, go to /home/tjalle/workspaces/Workspace\ VB"
     echo "gowcn, go to work space and open in editor"
-    echo "stackSettingsPushpush settings to local stack folder"
+    echo "stackSettingsPush,push settings to local stack folder"
     echo "setupStack, setup local stack"
     echo "setupAll, setup stack and local folders"
 }
