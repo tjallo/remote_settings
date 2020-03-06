@@ -223,10 +223,10 @@ function setupStack() {
 function stackSettingsPush() {
     pushSettings
     cd ~/stack
-    git clone https://github.com/tjallo/remote_settings
-    git clone https://github.com/tjallo/Flutter_DateTime_HelloWorld
-    git clone https://github.com/tjallo/PrivateFlaskServer
-    git clone https://github.com/tjallo/SynologyTimeChimpFolder
-    git clone https://github.com/tjallo/soundsnap
-    git clone https://github.com/tjallo/ffmpeg-mp4-aif-merger
+    sudo git clone https://github.com/tjallo/remote_settings
+    sudo git clone https://github.com/tjallo/Flutter_DateTime_HelloWorld
+    sudo git clone https://github.com/tjallo/PrivateFlaskServer
+    sudo git clone https://github.com/tjallo/SynologyTimeChimpFolder
+    sudo git clone https://github.com/tjallo/soundsnap
+    sudo git clone https://github.com/tjallo/ffmpeg-mp4-aif-merger
 }
