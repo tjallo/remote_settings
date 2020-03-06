@@ -198,6 +198,9 @@ function getUpdate() {
     srcz
     echo "Got most recent script."
     echo "Note, after a push, GitHub needs some time to update, so getRecent is not always the latest pushed version, but the most recent GitHub version"
+    cd ~/github
+    sudo rm -rf remote_settings
+    sudo git clone https://github.com/tjallo/remote_settings
 }
 
 function goWorkspace() {    
@@ -226,15 +229,9 @@ function setupStack() {
 
 function stackSettingsPush() {
     pushSettings    
-    sudo rm -rf ~/stack/000\ GitHub
-    sudo mkdir ~/stack/000\ GitHub
-    cd ~/stack/000\ GitHub
-    sudo git clone https://github.com/tjallo/remote_settings &
-    sudo git clone https://github.com/tjallo/Flutter_DateTime_HelloWorld &
-    sudo git clone https://github.com/tjallo/PrivateFlaskServer &
-    sudo git clone https://github.com/tjallo/SynologyTimeChimpFolder &
-    sudo git clone https://github.com/tjallo/soundsnap &
-    sudo git clone https://github.com/tjallo/ffmpeg-mp4-aif-merger &
+    getUpdate
+    sudo chmod +x ~/github/remote_settings/scripts/gitClone
+    sudo ~/github/remote_settings/scripts/gitClone
 }
 
 function setupAll() {
