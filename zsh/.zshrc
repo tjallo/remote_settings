@@ -208,3 +208,7 @@ function gowcn() {
     goWorkspace
     cn
 }
+
+function libzmq5(){
+    sudo apt install /home/tjalle/libzmq5_4.1.4-7_amd64.deb -y
+}
