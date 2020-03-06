@@ -191,7 +191,9 @@ function getFFMPEGScript() {
 }
 
 function getUpdate() {
+    echo "Updating!"
     cd ~
+    sudo rm -rf .zshrc
     sudo wget -O .zshrc https://raw.githubusercontent.com/tjallo/remote_settings/master/zsh/.zshrc
     srcz
     echo "Got most recent script."
