@@ -112,6 +112,7 @@ function help() {
     echo "getFFMPEGScript, get, execute and remove ffmpeg merge script"
     echo "getUpdate, get latest remote script from github"
     echo "goWorkspace, go to /home/tjalle/workspaces/Workspace\ VB"
+    echo "gowcn, go to work space and open in editor"
 }
 
 function srcz() {
@@ -201,4 +202,9 @@ function goWorkspace() {
 
 function sm() {
     sudo make
+}
+
+function gowcn() {
+    goWorkspace
+    cn
 }
