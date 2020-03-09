@@ -116,6 +116,7 @@ function help() {
     echo "stackSettingsPush,push settings to local stack folder"
     echo "setupStack, setup local stack"
     echo "setupAll, setup stack and local folders"
+    echo "getLastFM"
 }
 
 function srcz() {
@@ -240,4 +241,8 @@ function setupAll() {
 
 function lua() {
     lua5.3 $1
+}
+
+function getLastFM() {
+    python3 /home/tjalle/pyGround/getLastFM.py
 }
