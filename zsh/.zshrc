@@ -237,3 +237,7 @@ function setupAll() {
     setupFolders
     setupStack
 }
+
+function lua() {
+    lua5.3 $1
+}
