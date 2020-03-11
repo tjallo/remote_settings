@@ -116,7 +116,8 @@ function help() {
     echo "stackSettingsPush,push settings to local stack folder"
     echo "setupStack, setup local stack"
     echo "setupAll, setup stack and local folders"
-    echo "getLastFM"
+    echo "getLastFM, get weekly last fm stats"
+    echo "addAddToBoot, add auto-updater to boot"
 }
 
 function srcz() {
@@ -153,14 +154,14 @@ function copyZSHRC(){
 
 function genPush() {
     echo "started pushing local folder"
-    git add .
-    git commit -m "Automated Push"
-    git push
+    sudo git add .
+    sudo git commit -m "Automated Push"
+    sudo git push
 }
 
 function getCodeExtensions() {
     echo "exporting vscode extensions..."
-    code --list-extensions| xargs -L 1 echo code --install-extension > extensions.txt
+    code --list-extensions| sudo xargs -L 1 echo code --install-extension > extensions.txt
 }
 
 function pushSettings(){
@@ -237,7 +238,6 @@ function stackSettingsPush() {
 function setupAll() {
     setupFolders
     setupStack
-    addAddToBoot
 }
 
 function lua() {
@@ -256,7 +256,7 @@ function getLastFM() {
     sudo rm -rf .temp
     echo ""
     echo ""
-    echo "If error, make sure Stack is setup properly (run \"setupStack\")"
+    echo "If error, make sure stack is setup properly (run \"setupStack\")"
 }
 
 function raspi() {
