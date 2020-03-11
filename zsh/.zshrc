@@ -246,3 +246,11 @@ function lua() {
 function getLastFM() {
     python3 /home/tjalle/pyGround/getLastFM.py
 }
+
+function torrentbak() {
+    ssh tjalle@tjallo.nl -p 6969
+}
+
+function raspi() {
+    ssh ubuntu@tjallo.nl -p 6970
+}
