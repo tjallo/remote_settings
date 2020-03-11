@@ -244,7 +244,16 @@ function lua() {
 }
 
 function getLastFM() {
-    python3 /home/tjalle/pyGround/getLastFM.py
+    echo "Make sure Stack is setup"
+    home
+    sudo mkdir .temp
+    cd .temp
+    sudo cp stack/000\ zsh\ scripts/getLastFM.py .
+    sudo cp stack/000\ zsh\ scripts/keys.py .
+    python3 getLastFM.py
+    cd ..
+    sudo rm -rf .temp
+    echo "If error, make sure Stack is setup properly (run setupStack)"
 }
 
 function raspi() {
