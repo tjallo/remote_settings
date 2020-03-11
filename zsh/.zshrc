@@ -253,6 +253,8 @@ function getLastFM() {
     python3 getLastFM.py
     cd ..
     sudo rm -rf .temp
+    echo ""
+    echo ""
     echo "If error, make sure Stack is setup properly (run setupStack)"
 }
 
