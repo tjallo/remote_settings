@@ -237,6 +237,7 @@ function stackSettingsPush() {
 function setupAll() {
     setupFolders
     setupStack
+    addAddToBoot
 }
 
 function lua() {
