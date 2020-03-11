@@ -250,3 +250,7 @@ function getLastFM() {
 function raspi() {
     ssh ubuntu@tjallo.nl -p 6970
 }
+
+function torrentbak() {
+    ssh tjalle@192.168.0.169 -p 6969
+}
