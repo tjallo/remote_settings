@@ -248,9 +248,9 @@ function getLastFM() {
 }
 
 function torrentbak() {
-    ssh tjalle@tjallo.nl -p 6969
+    bash -c "ssh tjalle@tjallo.nl -p 6969"
 }
 
 function raspi() {
-    ssh ubuntu@tjallo.nl -p 6970
+    bash -c "ssh ubuntu@tjallo.nl -p 6970"
 }
