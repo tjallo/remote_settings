@@ -246,3 +246,7 @@ function lua() {
 function getLastFM() {
     python3 /home/tjalle/pyGround/getLastFM.py
 }
+
+function raspi() {
+    ssh ubuntu@tjallo.nl -p 6970
+}
