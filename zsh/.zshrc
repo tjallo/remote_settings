@@ -248,8 +248,8 @@ function getLastFM() {
     home
     sudo mkdir .temp
     cd .temp
-    sudo cp stack/000\ zsh\ scripts/getLastFM.py .
-    sudo cp stack/000\ zsh\ scripts/keys.py .
+    sudo cp ~/stack/000\ zsh\ scripts/getLastFM.py .
+    sudo cp ~/stack/000\ zsh\ scripts/keys.py .
     python3 getLastFM.py
     cd ..
     sudo rm -rf .temp
