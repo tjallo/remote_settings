@@ -255,7 +255,7 @@ function getLastFM() {
     sudo rm -rf .temp
     echo ""
     echo ""
-    echo "If error, make sure Stack is setup properly (run setupStack)"
+    echo "If error, make sure Stack is setup properly (run \"setupStack\")"
 }
 
 function raspi() {
