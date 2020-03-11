@@ -266,9 +266,3 @@ function raspi() {
 function torrentbak() {
     ssh tjalle@192.168.0.169 -p 6969
 }
-
-function addAddToBoot() {
-    sudo chmod +x ~/github/remote_settings/scripts/addToBoot
-    sudo cp ~/github/remote_settings/scripts/getZSH.service /etc/systemd/system/
-    sudo systemctl enable getZSH.service
-}

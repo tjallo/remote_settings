@@ -1,7 +1,0 @@
-cd ~
-sudo rm -rf .zshrc
-sudo wget -O .zshrc https://raw.githubusercontent.com/tjallo/remote_settings/master/zsh/.zshrc
-source ~/.zshrc
-cd ~/github
-sudo rm -rf remote_settings
-sudo git clone https://github.com/tjallo/remote_settings
