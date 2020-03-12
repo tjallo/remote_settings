@@ -118,6 +118,7 @@ function help() {
     echo "setupAll, setup stack and local folders"
     echo "getLastFM, get weekly last fm stats"
     echo "addAddToBoot, add auto-updater to boot"
+    echo "schown, sudo chown current directory"
 }
 
 function srcz() {
@@ -266,4 +267,11 @@ function raspi() {
 
 function torrentbak() {
     ssh tjalle@192.168.0.169 -p 6969
+}
+
+function schown() {
+    echo "If this takes to long, you have are in a root directory"
+    sudo chown -R $USER:$USER .
+    pwd
+    echo "Is now yours again"
 }
