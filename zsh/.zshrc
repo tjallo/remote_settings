@@ -119,6 +119,8 @@ function help() {
     echo "getLastFM, get weekly last fm stats"
     echo "addAddToBoot, add auto-updater to boot"
     echo "schown, sudo chown current directory"
+    echo "raspi"
+    echo "torrentbak"
 }
 
 function srcz() {
@@ -234,6 +236,10 @@ function stackSettingsPush() {
     getUpdate
     setupStack
     sudo chmod +x ~/github/remote_settings/scripts/gitClone
+    sudo rm -rf ~/0
+    sudo rm -rf ~/stack/000\ GitHub/
+    sudo mkdir ~/stack/000\ GitHub/
+    cd ~/stack/000\ GitHub/
     sudo ~/github/remote_settings/scripts/gitClone
 }
 
