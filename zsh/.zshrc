@@ -231,6 +231,7 @@ function setupStack() {
 
 function stackSettingsPush() {
     getUpdate
+    setupStack
     sudo chmod +x ~/github/remote_settings/scripts/gitClone
     sudo ~/github/remote_settings/scripts/gitClone
 }
