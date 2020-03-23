@@ -100,6 +100,7 @@ source $ZSH/oh-my-zsh.sh
 
 function help() {
     echo "srcz, source .zshrc"
+    echo "rl, ride login at default address"
     echo "Zedit, edit .zshrc"
     echo "home, go to home directory"
     echo "p3, python3 alias"
@@ -274,4 +275,8 @@ function schown() {
     sudo chown -R $USER:$USER .
     pwd
     echo "Is now yours again"
+}
+
+function rl() {
+    ride login 192.168.0.1
 }
