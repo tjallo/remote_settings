@@ -108,7 +108,6 @@ function help() {
     echo "copyZSHRC, copy ZSHRC to backup folder"
     echo "genPush, generic push the current folder"
     echo "pushSettings, copy and backup settings then push them to the github repo"
-    echo "getCodeExtensions, get code extensions and export them to cwd"
     echo "getFFMPEGScript, get, execute and remove ffmpeg merge script"
     echo "getUpdate, get latest remote script from github"
     echo "goWorkspace, go to /home/tjalle/workspaces/Workspace\ VB"
@@ -152,7 +151,7 @@ function cn() {
 
 function copyZSHRC(){
     echo "backing up .zshrc..."
-    cp ~/.zshrc ~/github/remote_settings/zsh/
+    sudo cp ~/.zshrc ~/github/remote_settings/zsh/
 }
 
 function genPush() {
@@ -162,10 +161,7 @@ function genPush() {
     sudo git push
 }
 
-function getCodeExtensions() {
-    echo "exporting vscode extensions..."
-    code --list-extensions| sudo xargs -L 1 echo code --install-extension > extensions.txt
-}
+
 
 function pushSettings(){
     srcz
@@ -174,9 +170,7 @@ function pushSettings(){
     copyZSHRC
 
     #copy current vscode extension list
-    echo "Copy VSCODE extension list"
-    cd ~/github/remote_settings/vscode
-    getCodeExtensions
+   
 
     #push to github
     echo "Pushing to GitHub"
