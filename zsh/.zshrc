@@ -117,6 +117,7 @@ function help() {
     echo "setupStack, setup local stack"
     echo "setupAll, setup stack and local folders"
     echo "getLastFM, get weekly last fm stats"
+    echo "setUser, set lastfm user"
     echo "addAddToBoot, add auto-updater to boot"
     echo "schown, sudo chown current directory"
     echo "raspi"
@@ -279,4 +280,9 @@ function schown() {
 
 function rl() {
     ride login 192.168.0.1
+}
+
+function setUser() {
+    sudo nano ~/stack/000\ zsh\ scripts/getLastFM.py
+    echo "Make sure stack is setup properly (setupStack)"
 }
