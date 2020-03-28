@@ -293,7 +293,7 @@ function csgoItems() {
     cd .tempzsh
     sudo git clone https://github.com/tjallo/CSGO-Tracker
     cd CSGO-Tracker
-    pip install -r requirements
+    sudo pip3 install -r requirements
     python3 main.py
     cd ~
     sudo rm -rf .tempzsh
