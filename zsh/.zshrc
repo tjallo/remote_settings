@@ -286,3 +286,15 @@ function setUser() {
     sudo nano ~/stack/000\ zsh\ scripts/getLastFM.py
     echo "Make sure stack is setup properly (setupStack)"
 }
+
+function csgoItems() {
+    cd ~
+    sudo mkdir .tempzsh
+    cd .tempzsh
+    sudo git clone https://github.com/tjallo/CSGO-Tracker
+    cd CSGO-Tracker
+    pip install -r requirements
+    python3 main.py
+    cd ~
+    sudo rm -rf .tempzsh
+}
