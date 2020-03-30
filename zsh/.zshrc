@@ -320,9 +320,9 @@ function csApp() {
 }
 
 function getCSApp() {
-    sudo chmod -R 777 ~/csgoitems 
     cd ~
     sudo rm -rf csgoitems
     sudo mkdir csgoitems
     sudo git clone https://github.com/tjallo/csgoitems.app
+    sudo chmod -R 777 ~/csgoitems
 }
