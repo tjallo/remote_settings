@@ -290,9 +290,11 @@ function setUser() {
 function csgoItems() {
     cd ~
     sudo mkdir .tempzsh
-    cd .tempzsh
+    cd ~/.tempzsh
     sudo git clone https://github.com/tjallo/CSGO-Tracker
-    cd CSGO-Tracker
+    cd ~
+    sudo chmod -R 777 .tempzsh
+    cd ~/.tempzsh/CSGO-Tracker
     sudo pip3 install -r requirements
     python3 main.py
     cd ~
