@@ -314,6 +314,7 @@ function pushApp() {
 }
 
 function csApp() {
+    sudo chown $USER -R /home/tjalle/csgoitems/csgoitems.app/app/MongoDB/
     sudo chmod -R 777 ~/csgoitems
     cd ~/csgoitems/csgoitems.app
 }
