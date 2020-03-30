@@ -305,7 +305,9 @@ function csgoItems() {
     sudo rm -rf .tempzsh
 }
 
-function pushApp() {
+function pushApp() {    
+    source ~/csgoitems/csgoitems.app/app/python/csgoitems/bin/activate
+    pip freeze > ~/csgoitems/csgoitems.app/app/python/csgoitems/requirements.txt
     cd ~/csgoitems/csgoitems.app
     genPush
 }
