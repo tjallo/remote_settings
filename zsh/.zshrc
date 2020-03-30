@@ -122,6 +122,9 @@ function help() {
     echo "schown, sudo chown current directory"
     echo "raspi"
     echo "torrentbak"
+    echo "pushApp, push commit etc, cs app"
+    echo "csApp, go to csApp page"
+    echo "getCSApp, update cs app from github"
 }
 
 function srcz() {
@@ -300,4 +303,20 @@ function csgoItems() {
     python3 main.py
     cd ~
     sudo rm -rf .tempzsh
+}
+
+function pushApp() {
+    cd ~/csgoitems/csgoitems.app
+    genPush
+}
+
+function csApp() {
+    cd ~/csgoitems/csgoitems.app
+}
+
+function getCSApp() {
+    cd ~
+    sudo rm -rf csgoitems
+    sudo mkdir csgoitems
+    sudo git clone https://github.com/tjallo/csgoitems.app
 }
