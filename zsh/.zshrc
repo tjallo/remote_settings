@@ -306,8 +306,8 @@ function csgoItems() {
 }
 
 function pushApp() {    
-    source ~/csgoitems/csgoitems.app/app/python/csgoitems/bin/activate
-    pip freeze > ~/csgoitems/csgoitems.app/app/python/csgoitems/requirements.txt
+    source ~/csgoitems/csgoitems.app/app/python/csgoapp-python/bin/activate
+    pip freeze > ~/csgoitems/csgoitems.app/app/python/requirements.txt
     cd ~/csgoitems/csgoitems.app
     genPush
 }
