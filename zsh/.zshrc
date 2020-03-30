@@ -295,6 +295,7 @@ function csgoItems() {
     cd ~
     sudo chmod -R 777 .tempzsh
     cd ~/.tempzsh/CSGO-Tracker
+    sudo chmod -R 777 ~/.cache
     sudo pip3 install -r requirements
     python3 main.py
     cd ~
