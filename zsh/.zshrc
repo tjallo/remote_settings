@@ -329,6 +329,7 @@ function getCSApp() {
 }
 
 function runBuildBot() {
-    docker build -t discordbot /home/tjalle/sambashare/torrent/github/DiscordPyBot/ && docker run -it discordbot
+    cd /home/tjalle/sambashare/torrent/github/DiscordPyBot/
+    docker build -t discordbot . && docker run -it discordbot
 }
 
