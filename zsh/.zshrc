@@ -99,6 +99,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 function help() {
+    echo "runBuildBot, builds and runs discordbot repo"
     echo "srcz, source .zshrc"
     echo "rl, ride login at default address"
     echo "Zedit, edit .zshrc"
@@ -326,3 +327,8 @@ function getCSApp() {
     sudo git clone https://github.com/tjallo/csgoitems.app
     sudo chmod -R 777 ~/csgoitems
 }
+
+function runBuildBot() {
+    docker build -t discordbot /home/tjalle/sambashare/torrent/github/DiscordPyBot/ && docker run -it discordbot
+}
+
