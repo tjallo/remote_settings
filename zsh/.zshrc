@@ -126,6 +126,7 @@ function help() {
     echo "pushApp, push commit etc, cs app"
     echo "csApp, go to csApp page"
     echo "getCSApp, update cs app from github"
+    echo "pwdMount, mount password drive stack"
 }
 
 function srcz() {
@@ -333,3 +334,6 @@ function runBuildBot() {
     docker build -t discordbot . && docker run -it discordbot
 }
 
+function pwdMount() {
+    sudo mount.davfs https://tjallo.stackstorage.com/remote.php/webdav/ /mnt/pwd -o rw,uid=pwdb
+}
